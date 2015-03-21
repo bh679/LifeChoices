@@ -4,11 +4,11 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="7" enumb="2">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,11 +25,125 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.name[0] = "1"
-global.name[1] = "2"
-global.name[2] = "3"
-global.name[3] = "4"
-global.name[4] = "5"
+            <string>//in game level
+if (room = Combat_room) //TODO replace with check for combat room, if we have mutliple rooms
+{
+    //for all characters
+    for(i = 0; i &lt; global.totalChars; i++)
+    {
+        //check characters is alive this round
+        if global.charAlive[i] == true
+        {
+            //this characters starts at 
+            var charX, charY;
+            //create at spawn point with a range
+            charX = spawnX + spawnRange/2 + random(spawnRange/2) 
+            charY = spawnY + spawnRange/2 + random(spawnRange/2)
+            
+            global.charRef[i] = instance_create(charX,charY,Char_obj) //save the characters reference
+            
+            global.charRef[i].charName = global.charName[i]//name the characters locally
+            global.charID[i] = i;//so character knows his own ID in the array
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Initalize characters variable</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//inisalize characters names - Brennan Hatton
+//TODO make this script somewhere it can be recalled when the gameplay needs to restart
+
+global.totalChars = 5//number of starting players
+
+//inilalies each player name to their id
+for(i = 0; i &lt; global.totalChars; i++)
+{
+ global.charName[i] = string(i) //string name of player
+ global.charRef[i] = 0;//reference to player so you can always talk to them directly
+ global.charAlive[i] = true; //character has not been chosen to die
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Initilize Level Variables</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>spawnX = 40
+spawnY = 40
+spawnRange = 250
 </string>
           </argument>
         </arguments>

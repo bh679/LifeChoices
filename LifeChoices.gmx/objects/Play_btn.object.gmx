@@ -95,11 +95,10 @@
           <argument>
             <kind>1</kind>
             <string>//Get names
-global.name[0] = get_string("Name your Gunner","Jacob");
-global.name[1] = get_string("Name your Slasher","Blood");
-global.name[2] = get_string("Name your Sniper","Luciel");
-global.name[3] = get_string("Name your Grenader","Francis");
-global.name[4] = get_string("Name your Engineer","Danielson");
+for(i = 0; i &lt; global.totalChars ; i++)
+{
+global.name[i] = get_string("Name your Gunner",get_random_name());
+}
 
 room_goto(Combat_room);
 </string>
