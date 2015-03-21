@@ -98,7 +98,7 @@
 //Get names
 for(i = 0; i &lt; global.totalChars ; i++)
 {
-global.name[i] = get_string("Name your Gunner",get_random_name());
+global.charName[i] = get_string("Name your Gunner",global.charName[i]); //random name is now set in Game_Control_obj on game start
 }
 
 room_goto(Combat_room);

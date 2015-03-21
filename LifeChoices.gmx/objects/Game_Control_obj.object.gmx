@@ -99,7 +99,7 @@ global.totalChars = 5//number of starting players
 //inilalies each player name to their id
 for(i = 0; i &lt; global.totalChars; i++)
 {
- global.charName[i] = string(i) //string name of player
+ global.charName[i] = get_random_name() //string name of player
  global.charRef[i] = 0;//reference to player so you can always talk to them directly
  global.charAlive[i] = true; //character has not been chosen to die
  global.charColor[i] = make_colour_hsv(random(255),150,150) //sets random hue color value
@@ -186,10 +186,12 @@ if (room = Menu_room)
     var textX = 150; //starting postion of Text
     var textY = 50; //starting postion of Text
     
+    draw_set_color(c_black)
+    
     //draw names for each characters
     for(i = 0; i &lt; global.totalChars; i++)
     {
-        draw_text(textX,textY+txtYDif,global.charName[i])
+        draw_text(textX,textY+txtYDif*i,string(i+1) + " - " + global.charName[i])
     }
 }
 </string>
