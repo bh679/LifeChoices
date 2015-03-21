@@ -8,6 +8,75 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_blend = c_dkgray
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_blend = c_dkgray
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_blend = c_maroon
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="7">
       <action>
         <libid>1</libid>
@@ -26,13 +95,43 @@
           <argument>
             <kind>1</kind>
             <string>//Get names
-global.name[0] = get_string("Name your first character","character 1");
-global.name[1] = get_string("Name your first character","character 2");
-global.name[2] = get_string("Name your first character","character 3");
-global.name[3] = get_string("Name your first character","character 4");
-global.name[4] = get_string("Name your first character","character 5");
+global.name[0] = get_string("Name your Gunner","Jacob");
+global.name[1] = get_string("Name your Slasher","Blood");
+global.name[2] = get_string("Name your Sniper","Luciel");
+global.name[3] = get_string("Name your Grenader","Francis");
+global.name[4] = get_string("Name your Engineer","Danielson");
 
 room_goto(Combat_room);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(sprite_index,image_index,x,y,1,1,image_angle,image_blend,1)
+draw_set_font(Menu_fnt)
+draw_set_colour(c_white)
+draw_set_halign(fa_center)
+if (image_blend = c_dkgray)
+draw_text(x,y + 18,"Play")
+else
+draw_text(x,y,"Do you really#want us to#die?")
 </string>
           </argument>
         </arguments>
