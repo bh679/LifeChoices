@@ -285,7 +285,15 @@ draw_text_shadowed(x-sprite_width,y-sprite_height,charName,c_white,c_black,0.9)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,charColor,image_alpha)
+            <string>//Brennan Haton 3/20/15
+//if selected draw highled circle
+if selected
+    draw_sprite_ext(sprite_index,image_index,x,y,image_xscale+0.4,image_yscale+0.4,image_angle,c_blue,0.4)
+
+
+//draws self with applied color
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,charColor,image_alpha)
+
 </string>
           </argument>
         </arguments>
