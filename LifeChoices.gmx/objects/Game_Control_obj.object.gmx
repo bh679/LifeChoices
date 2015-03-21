@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//in game level
+            <string>//Brennan Hatton  3/20/15
+//in game level
 if (room = Combat_room) //TODO replace with check for combat room, if we have mutliple rooms
 {
     //for all characters
@@ -92,7 +93,7 @@ if (room = Combat_room) //TODO replace with check for combat room, if we have mu
             <kind>1</kind>
             <string>//inisalize characters names - Brennan Hatton
 //TODO make this script somewhere it can be recalled when the gameplay needs to restart
-
+//Brennan Hatton  3/20/15
 global.totalChars = 5//number of starting players
 
 //inilalies each player name to their id
@@ -145,7 +146,8 @@ for(i = 0; i &lt; global.totalChars; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//spawn position can be later set by an obejct
+            <string>//Brennan Hatton  3/20/15
+//spawn position can be later set by an obejct
 spawnX = 250
 spawnY = 250
 spawnRange = 250
@@ -154,6 +156,42 @@ spawnRange = 250
 exitRange = 50
 exitX = room_width - exitRange
 exitY = room_height - exitRange
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//soe menu graphics / debugging (could be turned into a feature)
+//Brennan Hatton 3/20/15
+if (room = Menu_room)
+{
+    var txtYDif = 15;//height between lines
+    var textX = 150; //starting postion of Text
+    var textY = 50; //starting postion of Text
+    
+    //draw names for each characters
+    for(i = 0; i &lt; global.totalChars; i++)
+    {
+        draw_text(textX,textY+txtYDif,global.charName[i])
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -196,7 +234,8 @@ exitY = room_height - exitRange
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw spawn location
+            <string>//Brennan Hatton  3/20/15
+//draw spawn location
 draw_set_color(c_yellow)
 draw_circle(spawnX,spawnY,spawnRange,false)
 

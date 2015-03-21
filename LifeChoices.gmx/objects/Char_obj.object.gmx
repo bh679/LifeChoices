@@ -25,14 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Target = 0
+            <string>//Scott Young  3/20/15
+Target = 0
 MoveTargetX = x
 MoveTargetY = y
 BmaxCD = 20
 MaxSpeed = 10
 selected = false
 
-//naming system - Brennan
+//naming system
+//Brennan Hatton  3/20/15
 //assigned in room_start of Game_Control_obj
 charID = 0 //index of players for keeping track of who is chosen to survive
 charName = "unnnamed"
@@ -143,7 +145,8 @@ charColor = c_white
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Check if at finish! - Brennan Hatton
+            <string>//Check if at finish! 
+//Brennan Hatton  3/20/15
 //TODO replace end dectection with object based collision
 //get diostance to end
 distance_to_end = point_distance(x,y,Game_Control_obj.exitX,Game_Control_obj.exitY)

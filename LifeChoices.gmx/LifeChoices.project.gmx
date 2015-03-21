@@ -13,6 +13,7 @@
     <sprites name="Buttons">
       <sprite>sprites\play_btn_spr</sprite>
     </sprites>
+    <sprite>sprites\sprite2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
