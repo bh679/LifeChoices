@@ -43,7 +43,8 @@ if (room = Combat_room) //TODO replace with check for combat room, if we have mu
             global.charRef[i] = instance_create(charX,charY,Char_obj) //save the characters reference
             
             global.charRef[i].charName = global.charName[i]//name the characters locally
-            global.charID[i] = i;//so character knows his own ID in the array
+            global.charRef[i].charID = i;//so character knows his own ID in the array
+            global.charRef[i].charColor = global.charColor[i]//set his color
         }
     }
 }
@@ -100,7 +101,10 @@ for(i = 0; i &lt; global.totalChars; i++)
  global.charName[i] = string(i) //string name of player
  global.charRef[i] = 0;//reference to player so you can always talk to them directly
  global.charAlive[i] = true; //character has not been chosen to die
+ global.charColor[i] = make_colour_hsv(random(255),150,150) //sets random hue color value
+ //TODO compare colours to make sure they are different enough
 }
+
 </string>
           </argument>
         </arguments>
