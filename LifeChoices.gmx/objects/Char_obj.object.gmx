@@ -238,8 +238,11 @@ selected = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_black)
-draw_text(x,y,charName)
+            <string>//by Brennan Hatton - 3/20/15
+//Draws the name of the player top right of the player.
+//TODO have names dynamically position themselves so they dont overlap
+draw_set_color(c_white)
+draw_text_shadowed(x-sprite_width,y-sprite_height,charName,c_white,c_black,0.9)
 </string>
           </argument>
         </arguments>
