@@ -106,6 +106,58 @@ charactersName = "unnnamed"
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Game Mechanics</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Check if at finish! - Brennan Hatton
+//TODO replace end dectection with object based collision
+//get diostance to end
+distance_to_end = point_distance(x,y,Game_Control_obj.exitX,Game_Control_obj.exitY)
+//check if close enough
+if(distance_to_end &lt; Game_Control_obj.exitRange)
+{
+    //TODO Code next level Mechanics
+    show_message("Level Over, now code the next level!"); 
+    //return to main menu to avoid infiniate loop of popup message
+    room_goto(Menu_room);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="6" enumb="51">
       <action>
