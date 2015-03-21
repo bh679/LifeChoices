@@ -94,7 +94,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get names
+            <string>//Brennan Hatton  3/20/15
+//Get names
 for(i = 0; i &lt; global.totalChars ; i++)
 {
 global.name[i] = get_string("Name your Gunner",get_random_name());
@@ -123,7 +124,8 @@ room_goto(Combat_room);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,1,1,image_angle,image_blend,1)
+            <string>//Scott Young  3/20/15
+draw_sprite_ext(sprite_index,image_index,x,y,1,1,image_angle,image_blend,1)
 draw_set_font(Menu_fnt)
 draw_set_colour(c_white)
 draw_set_halign(fa_center)
