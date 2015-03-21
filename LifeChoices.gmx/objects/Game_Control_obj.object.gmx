@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>100</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -37,8 +37,8 @@ if (room = Combat_room) //TODO replace with check for combat room, if we have mu
             //this characters starts at 
             var charX, charY;
             //create at spawn point with a range
-            charX = spawnX + spawnRange/2 + random(spawnRange/2) 
-            charY = spawnY + spawnRange/2 + random(spawnRange/2)
+            charX = spawnX + spawnRange/2 - random(spawnRange/2) 
+            charY = spawnY + spawnRange/2 - random(spawnRange/2)
             
             global.charRef[i] = instance_create(charX,charY,Char_obj) //save the characters reference
             
@@ -141,9 +141,64 @@ for(i = 0; i &lt; global.totalChars; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawnX = 40
-spawnY = 40
+            <string>//spawn position can be later set by an obejct
+spawnX = 250
+spawnY = 250
 spawnRange = 250
+
+//finish position can be later set by an object
+exitRange = 50
+exitX = room_width - exitRange
+exitY = room_height - exitRange
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>placeholder Art</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//draw spawn location
+draw_set_color(c_yellow)
+draw_circle(spawnX,spawnY,spawnRange,false)
+
+//draw exit location
+draw_set_color(c_blue)
+draw_circle(exitX,exitY,exitRange,false)
 </string>
           </argument>
         </arguments>
