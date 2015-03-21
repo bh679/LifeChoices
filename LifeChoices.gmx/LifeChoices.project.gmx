@@ -20,10 +20,10 @@
     <font>fonts\Menu_fnt</font>
   </fonts>
   <objects name="objects">
-    <object>objects\Char_obj</object>
     <object>objects\Enemy_obj</object>
     <object>objects\Play_btn</object>
     <object>objects\Game_Control_obj</object>
+    <object>objects\Char_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Menu_room</room>
