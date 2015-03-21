@@ -10,13 +10,15 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\Char_Spr</sprite>
-    <sprite>sprites\sprite1</sprite>
     <sprites name="Buttons">
       <sprite>sprites\play_btn_spr</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\Menu_fnt</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Char_obj</object>
     <object>objects\Enemy_obj</object>
